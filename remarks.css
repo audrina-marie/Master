@@ -1,0 +1,300 @@
+/*=======================================================*/
+/*  New SF-52 Form (FY 2024 - 2025. Built with ReactJS)  */
+/*  General Styling - Material UI & Bootstrap Overrides  */
+/*  Located in: fedhr/fhr-react-client/src/feature/sf52/ */
+/*=======================================================*/
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+button,
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    text-transform: none;
+    border-radius: 0;
+}
+
+button:focus:not(:focus-visible),
+button:focus {
+    outline: 0;
+}
+
+[type="button"],
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+[type="button"]:not(:disabled),
+button:not(:disabled) {
+    pointer-events: auto;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Typography */
+.text-primary {
+    color: #0d6efd;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Utility Classes */
+.py-4 {
+    padding: 1.5rem 0;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Shadow */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Form Control */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-control:focus {
+    color: #212529;
+    background: #fff;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:disabled {
+    background: #e9ecef;
+    opacity: 1;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-group > .form-control {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.input-group > .form-control:focus {
+    z-index: 3;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    background: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #212529;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+}
+
+/* Button Variants */
+.btn-danger {
+    color: #fff;
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+    border-color: #b02a37;
+}
+
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+}
+
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* General Styles for the Form Container */
+.sf52-form {
+    background-color: #f8f9fa; /* Light background for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Card Styling */
+.sf52-form .card {
+    border: 1px solid #dee2e6; /* Subtle border for distinction */
+    border-radius: 10px;
+}
+
+.sf52-form .card-body {
+    padding: 20px;
+}
+
+.sf52-form .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Buttons */
+.sf52-form .btn {
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sf52-form .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.sf52-form .btn-secondary:hover {
+    background-color: #5a6268;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip Styling */
+.tooltip-inner {
+    background-color: #333; /* Darker background for contrast */
+    color: #fff; /* White text for readability */
+    font-size: 0.875rem; /* Slightly smaller text */
+    border-radius: 5px;
+}
+
+.tooltip-arrow {
+    border-bottom-color: #333 !important; /* Match tooltip background */
+}
+
+/* Input Fields */
+.sf52-form input {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.sf52-form input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+    outline: none;
+}
+
+/* Labels */
+.sf52-form label {
+    font-size: .75em;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+/* Sections */
+.sf52-form .text-primary {
+    color: #007bff !important;
+}
+
+.sf52-form .text-success {
+    color: #28a745 !important;
+}
